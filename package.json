@@ -1,0 +1,66 @@
+{
+  "name": "@forumulate/angular",
+  "version": "0.1.0",
+  "description": "Angular standalone components and a service for Forumulate: comments, search, changelog and a content feed on any Angular app, plus a typed content client.",
+  "license": "MIT",
+  "author": "Forumulate",
+  "homepage": "https://forumulate.com/guides",
+  "bugs": {
+    "url": "https://forumulate.com/community"
+  },
+  "keywords": [
+    "forumulate",
+    "angular",
+    "standalone",
+    "comments",
+    "changelog",
+    "docs",
+    "forum",
+    "blog"
+  ],
+  "type": "module",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "ngc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@forumulate/embed": "^1.0.0",
+    "tslib": "^2.6.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=17.0.0",
+    "@angular/core": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": "~17.3.0",
+    "@angular/compiler": "~17.3.0",
+    "@angular/compiler-cli": "~17.3.0",
+    "@angular/core": "~17.3.0",
+    "rxjs": "~7.8.0",
+    "typescript": "~5.4.5",
+    "zone.js": "~0.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forumulate/angular.git"
+  }
+}
